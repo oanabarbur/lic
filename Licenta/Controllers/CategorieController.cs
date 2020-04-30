@@ -20,7 +20,7 @@ namespace Licenta.Controllers
         // GET: Categorie
         public ViewResult Index()
         {
-            var categorie = _context.Categorie;//proprietatea acestei categorii este un DBSet definit in DbContext
+            var categorie = _context.Categorie.ToList();
             return View(categorie);
         }
     }
